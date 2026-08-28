@@ -1,3 +1,1 @@
 # Ikigai
-
-Voici un aperçu !
