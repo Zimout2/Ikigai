@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Ikigai Interactif</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0f172a;
+        color: #f8fafc;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+      h1 {
+        color: #38bdf8;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+      p.subtitle {
+        color: #94a3b8;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        width: 100%;
+      }
+      .card {
+        background-color: #1e293b;
+        border: 2px solid #334155;
+        border-radius: 12px;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        border-color: #38bdf8;
+      }
+      .card h2 {
+        font-size: 1.2rem;
+        margin-top: 0;
+        color: #38bdf8;
+      }
+      .content {
+        display: none;
+        margin-top: 15px;
+        font-size: 0.95rem;
+        color: #cbd5e1;
+        animation: fadeIn 0.4s ease-in-out;
+      }
+      .card.active .content {
+        display: block;
+      }
+      .card.active {
+        border-color: #38bdf8;
+        background-color: #1e293b;
+      }
+      .center-box {
+        grid-column: span 2;
+        background: linear-gradient(135deg, #0284c7, #2563eb);
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        margin-top: 10px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      }
+      .center-box h2 {
+        color: #fff;
+        margin-top: 0;
+      }
+      ul {
+        padding-left: 20px;
+        margin: 5px 0;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mon Ikigai Interactif</h1>
+    <p class="subtitle">
+      Cliquez sur chaque dimension pour explorer mon profil professionnel et
+      personnel.
+    </p>
+
+    <div class="container">
+      <!-- 1. Ce que j'aime -->
+      <div class="card" onclick="toggleCard(this)">
+        <h2>❤️ Ce que j'aime faire</h2>
+        <p>Cliquez pour voir les détails...</p>
+        <div class="content">
+          <ul>
+            <li>Faire du vélo le matin (Passion)</li>
+            <li>Jouer aux jeux vidéos en multi</li>
+            <li>
+              Faire de l'informatique, sécurisation des sites informatiques
+            </li>
+            <li>
+              Apprendre de nouvelles choses sur l'informatique, gérer des
+              problèmes informatiques
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. Ce pour quoi je suis doué -->
+      <div class="card" onclick="toggleCard(this)">
+        <h2>⭐ Ce pour quoi je suis doué</h2>
+        <p>Cliquez pour voir les détails...</p>
+        <div class="content">
+          <ul>
+            <li>Expliquer l'informatique de manière simpliste</li>
+            <li>Faire du vélo avec du dénivelé</li>
+            <li>Expliquer et résoudre des problèmes informatiques</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. Ce pour quoi je peux être payé -->
+      <div class="card" onclick="toggleCard(this)">
+        <h2>💼 Ce pour quoi j'aimerai être payé</h2>
+        <p>Cliquez pour voir les détails...</p>
+        <div class="content">
+          <ul>
+            <li>Mes compétences en informatique</li>
+            <li>Mon aide dans le jardinage</li>
+            <li>Administrateur en cybersécurité informatique (Profession)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4. Ce dont le monde a besoin -->
+      <div class="card" onclick="toggleCard(this)">
+        <h2>🌍 Ce dont le monde a besoin selon moi</h2>
+        <p>Cliquez pour voir les détails...</p>
+        <div class="content">
+          <ul>
+            <li>De paix et de stabilité</li>
+            <li>De sécurité et de cybersécurité</li>
+            <li>Prévenir et protéger les gens du risque cyber (Mission)</li>
+            <li>Aider les gens en informatique (Vocation)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Résumé / Cœur de l'Ikigai -->
+      <div class="center-box">
+        <h2>🎯 Mon Ikigai</h2>
+        <p>
+          <strong>Administrateur en cybersécurité informatique</strong> :
+          Protéger et sécuriser les systèmes, tout en guidant et aidant les
+          autres grâce à votre passion pour l'informatique.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function toggleCard(card) {
+        card.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
